@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Recipe</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <form id="new-form" action="/recipes" method="POST" name="form2">
+        <label>Recipe Name:</label>
+        <input type="text" name="recipeName">
+        <label>Ingredients</label>
+        <input type="text" name="ingredientsInput" id="ingredientsInput">
+        <button onclick="addIngred()" type="button">Add Ingredient</button>
+        <label>Steps:-</label>
+        <input type="text" name="stepsInput" id="stepsInput">
+        <button onclick="addStep()" type="button">Add Step</button>
+      </form>
+      <h2 id="oneIngredient">Ingredients Added: </h2>
+      <h2 id="recipeStep">Recipe Steps: </h2>
+      <input type="submit" value="Add Recipe" form="new-form">
+</body>
+<script defer>
+    let ingredients = [];
+    let steps = [];
+    let ingredEl = document.getElementById("ingredientsInput");
+    let stepsEl = document.getElementById("stepsInput");
+    let formEl = document.getElementById("new-form");
+    function addStep() {
+        console.log(stepsEl);
+        steps.push(stepsEl.value);
+        document.getElementById("recipeStep").append(` ${stepsEl.value}`);
+        // return steps;
+        // Add the data as hidden input fields
+        let inputEl = document.createElement("input");
+        inputEl.setAttribute("type", "hidden");
+        inputEl.setAttribute("name", `steps`);
+        inputEl.setAttribute("value", stepsEl.value);
+        formEl.append(inputEl);
+        stepsEl.value = "";
+    };
+    function addIngred() {
+        console.log(ingredEl);
+        // Adds to ingredients array
+        ingredients.push(ingredEl.value);
+        // Adds content below ingredients added
+        document.getElementById("oneIngredient").append(` ${ingredEl.value}`);
+        // return ingredients;
+
+        // Add the data as hidden input fields
+        let inputEl = document.createElement("input");
+        inputEl.setAttribute("type", "hidden");
+        inputEl.setAttribute("name", `ingredients`);
+        inputEl.setAttribute("value", ingredEl.value);
+        formEl.append(inputEl);
+        ingredEl.value = "";
+    };
+</script>
+</html>

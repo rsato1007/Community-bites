@@ -1,0 +1,37 @@
+body {
+    margin: 1vw 2vw;
+}
+
+#nav-bytes {
+    display: inline;
+    margin-right: 5px;
+}
+
+#slogan {
+    display: inline;
+    font-style: italic;
+}
+
+#nav-links-container {
+    float: right;
+
+}
+
+.nav-links {
+    display: inline;
+    padding-right: 30px;
+}
+
+#header {
+    text-align: center;
+}
+
+#introContainer {
+    display: grid;
+}
+
+#mainImg {
+    height: 400px;
+    width: 400px;
+    display: inline;
+}

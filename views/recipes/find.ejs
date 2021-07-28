@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Recipe</title>
+</head>
+
+<body>
+  <%- include('../partials/navbar') %>
+  <form id="new-form" action="/recipes/display" method="GET">
+    <label>Enter Recipe Name (Title):</label>
+    <input type="text" name="recipeName">
+    <input type="submit" value="Find Recipe">
+  </form>
+  <section>
+    <% if (recipe.length){ %>
+      <table>
+        <thead>
+          <tr>
+            <th>Receipe Name</th>
+            <th>Ingredients</th>
+            <th>Steps</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <%= recipe[0].recipeName %>
+            </td>
+            <td>
+              <%= recipe[0].ingredients %>
+            </td>
+            <td>
+              <%= recipe[0].steps %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h2>Reviews</h2>
+      <form id="add-review-form" method="POST" action="/recipes/display?recipeName=<%= recipe[0].recipeName %>">
+        <label>Review:</label>
+        <textarea name="content"></textarea>
+        <label>Rating:</label>
+        <select name="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <input type="submit" value="Add Review" />
+      </form>
+  </section>
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>Ratings</th>
+          <th>Content</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% if (recipe[0].reviews.length){ %>
+            <% recipe[0].reviews.forEach(function(m) { %>
+              <td>
+                <%= m.rating %>
+              </td>
+              <td>
+                <%= m.content%>
+              </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <% } else { %>
+      <h5>No Reviews Yet</h5>
+      <% }%>
+
+  </section>
+  <% } else { %>
+    <h5>No Recipe Yet</h5>
+    <% }%>
+</body>
+
+</html>

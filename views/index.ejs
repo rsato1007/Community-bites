@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+    <h1 id="header">Welcome to Community Bites</h1>
+    <div id="introContainer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perferendis totam numquam natus ipsa velit, iste voluptates odit optio error quas deleniti non laudantium praesentium aperiam, nobis earum laboriosam accusamus?</p>
+        <img id="mainImg" src="/images/Main_Page.jpg" alt="">
+    </div>
+    <div><a href="/recipes/new">Create Recipe </a></div>
+    <div></div><a href="/recipes/find">Find your Favorite Recipe </a></div>
+    <div><a href="/recipes/show">Show All Recipes </a></div>
+    <!-- Place Nav UI Here -->
+    <ul class="right">
+        
+        <!-- new html below -->
+        <% if (user) { %>
+            <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+            <% } else { %>
+                <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+                <% } %>
+                    </li>
+    </ul>
+</body>
+
+</html>
