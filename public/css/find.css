@@ -1,0 +1,121 @@
+body {
+    margin: 1vw 2vw;
+    color: white;
+    background-color: rgba(88, 33, 115, 1);
+}
+
+#nav-container {
+    background-color: rgba(126, 144, 206, 1);
+}
+
+#nav-bytes {
+    display: inline;
+    margin-right: 5px;
+}
+
+#slogan {
+    display: inline;
+    font-style: italic;
+    font-family: 'MonteCarlo', cursive;
+    font-size: 1.6em;
+}
+
+#nav-links-container {
+    float: right;
+    height: 44px;
+    line-height: 44px;
+}
+
+.nav-links {
+    display: inline;
+    padding-right: 30px;
+    line-height: 100%;
+}
+
+#Find-Header {
+    text-align: center;
+}
+
+#form-text {
+    display: inline-block;
+    text-align: center;
+    border-style: solid;
+    border-color: darkgray;
+    background-color: darkgray;
+    margin: 0 auto;
+}
+
+#new-form {
+    text-align: center;
+}
+
+body {
+    margin: 1vw 2vw;
+    color: white;
+    background-color: rgba(88, 33, 115, 1);
+}
+
+#nav-container {
+    background-color: rgba(126, 144, 206, 1);
+}
+
+#nav-bytes {
+    display: inline;
+    margin-right: 5px;
+}
+
+#slogan {
+    display: inline;
+    font-style: italic;
+    font-family: 'MonteCarlo', cursive;
+    font-size: 1.6em;
+}
+
+#nav-links-container {
+    float: right;
+    height: 44px;
+    line-height: 44px;
+}
+
+.nav-links {
+    display: inline;
+    padding-right: 30px;
+    line-height: 100%;
+}
+
+#recipe-container {
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+#recipe-info-container {
+    display: flex;
+    justify-content: center;
+    /* grid-template-columns: 50% 50%;
+    grid-template-areas: "ingredients steps"; */
+
+}
+
+.recipe-title {
+    text-align: center;
+}
+
+#recipe-info-ingred {
+    margin-right: 5em;
+    /* grid-area: ingredients;
+    align-content: center; */
+}
+
+#recipe-info-steps {
+    margin-left: 5em;
+    /* grid-area: steps;
+    align-content: center; */
+}
+
+.form {
+    display: flex;
+    align-items: flex-end;
+}
+
+#add-review-form {
+    align-items: flex-end;
+}
