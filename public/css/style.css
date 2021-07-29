@@ -28,10 +28,18 @@ body {
 
 #introContainer {
     display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "text image";
+}
+
+#intro-text {
+    display: inline;
+    grid-area: text;
 }
 
 #mainImg {
     height: 400px;
     width: 400px;
-    display: inline;
+    display: inline-block;
+    grid-area: image;
 }
