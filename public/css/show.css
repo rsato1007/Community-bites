@@ -36,7 +36,31 @@ body {
     border-top: 4px solid black;
     border-bottom: 4px solid black;
 }
+#recipe-info-container {
+    display: flex;
+    justify-content: center;
+    /* grid-template-columns: 50% 50%;
+    grid-template-areas: "ingredients steps"; */
+
+}
+
+.recipe-title {
+    text-align: center;
+}
+
+#recipe-info-ingred {
+    margin-right: 5em;
+    /* grid-area: ingredients;
+    align-content: center; */
+}
+
+#recipe-info-steps {
+    margin-left: 5em;
+    /* grid-area: steps;
+    align-content: center; */
+}
 
 .form {
-    display: inline-block;
+    display: flex;
+    align-items: flex-end;
 }

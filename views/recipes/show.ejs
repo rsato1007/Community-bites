@@ -18,11 +18,11 @@
     <% recipe.forEach(function(m) { %>
       <hr>
       <div id="recipe container">
-        <h3>
+        <h3 class="recipe-title">
           <%= m.recipeName %>
         </h3>
         <div id="recipe-info-container">
-          <span class="recipe-info-box">
+          <div class="recipe-info-box" id="recipe-info-ingred">
             <h4>Ingredients:</h4>
             <ul>
               <% m.ingredients.forEach(function(ingred) { %>
@@ -31,8 +31,11 @@
                 </li>
                 <% }); %>
             </ul>
-          </span>
-          <span class="recipe-info-box">
+            <form action="/recipes/<%= m._id %>?_method=DELETE" method="POST" class="form">
+              <button type="submit">Delete</button>
+            </form>
+          </div>
+          <div class="recipe-info-box" id="recipe-info-steps">
             <h4>Steps:</h4>
             <ol>
               <% m.steps.forEach(function(step) { %>
@@ -41,15 +44,14 @@
                 </li>
                 <% }); %>
             </ol>
-          </span>
+            <form action="/recipes/<%= m._id %>" method="GET" class="form">
+              <button type="submit">Update</button>
+            </form>
+          </div>
         </div>
         <div id="buttons">
-          <form action="/recipes/<%= m._id %>?_method=DELETE" method="POST" class="form">
-            <button type="submit">Delete</button>
-          </form>
-          <form action="/recipes/<%= m._id %>" method="GET" class="form">
-            <button type="submit">Update</button>
-          </form>
+
+
         </div>
       </div>
       <% }); %>
