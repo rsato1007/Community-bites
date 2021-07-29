@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,22 +20,20 @@
             We are a community of culinary enthusiast, that want to get together a share our recipes with everyone. If you have a recipe that you wish to share with the community, we welcome it. Maybe you have a recipe and you would like some feedback from others. Maybe you have created a tasty masterpiece.  Or maybe you are just looking form something delicious to cook. Our goal is not only share our recipes, but to help broaden our skills as culinary artist.
             We do ask that all members be respectful to each other when reviewing  recipes. We also ask for all members to keep a cool head when receiving polite suggestion. You never know when a person may help you discover a way to bring you recipe to the next level.
             Be kind and respectful  to one another and as always dig in and enjoy!</p>
-        <img id="mainImg" src="/images/Main_Page.jpg" alt="">
+        <img id="mainImg" src="/images/Main_Pic.jpg" alt="">
     </div>
-    <div><a href="/recipes/new">Create Recipe </a></div>
-    <div></div><a href="/recipes/find">Find your Favorite Recipe </a></div>
-    <div><a href="/recipes/show">Show All Recipes </a></div>
-    <!-- Place Nav UI Here -->
-    <ul class="right">
-        
-        <!-- new html below -->
-        <% if (user) { %>
-            <a href="/logout"><i class="material-icons left"></i>Log Out</a>
-            <% } else { %>
-                <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
-                <% } %>
-                    </li>
-    </ul>
+    <div id="get-started-button">
+        <a id="get-started" href="/recipes/show">Get Started</a>
+    </div>
+    <!-- <span class="button-box">
+        <a href="/recipes/find"><button class="button-link">Find</button></a>
+    </span>
+    <span class="button-box">
+        <a href="/recipes/show"><button class="button-link">Show</button></a>
+    </span">
+    <span class="button-box">
+        <a href="/recipes/new"><button class="button-link">Create</button></a>
+    </span> -->
 </body>
 
 </html>

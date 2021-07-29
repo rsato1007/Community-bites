@@ -1,5 +1,13 @@
+
+
 body {
     margin: 1vw 2vw;
+    color: white;
+    background-color: rgba(88, 33, 115, 1);
+}
+
+#nav-container {
+    background-color: rgba(126, 144, 206, 1);
 }
 
 #nav-bytes {
@@ -10,31 +18,40 @@ body {
 #slogan {
     display: inline;
     font-style: italic;
+    font-family: 'MonteCarlo', cursive;
+    font-size: 1.6em;
 }
 
 #nav-links-container {
     float: right;
-
+    height: 44px;
+    line-height: 44px;
 }
 
 .nav-links {
     display: inline;
     padding-right: 30px;
+    line-height: 100%;
 }
 
 #header {
     text-align: center;
+    font-size: 2.5em;
 }
 
 #introContainer {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "text image";
+    column-gap: 75px;
 }
 
 #intro-text {
     display: inline;
     grid-area: text;
+    font-size: 1.5em;
+    line-height: 1.6em;
+    font-style: italic;
 }
 
 #mainImg {
@@ -42,4 +59,23 @@ body {
     width: 400px;
     display: inline-block;
     grid-area: image;
+}
+
+#get-started {
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    height: 75px;
+    border-radius: 25%;
+    text-align: center;
+    line-height: 75px;
+    background-color: orange;
+    display: inline-block;
+    font-size: 1.2em;
+    border: 1px solid black;
+}
+
+#get-started-button {
+    text-align: center;
+    margin-top: 100px;
 }
