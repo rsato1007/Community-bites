@@ -31,3 +31,12 @@ body {
     padding-right: 30px;
     line-height: 100%;
 }
+
+#recipe-container {
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.form {
+    display: inline-block;
+}

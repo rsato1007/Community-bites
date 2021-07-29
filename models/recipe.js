@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const reviewSchema = new Schema({
     content: String,
     rating: {type: Number, min: 1, max: 5, default: 5},
-    userId:{type: Schema.Types.ObjectId, ref: 'User'},
+    userId: {type: Schema.Types.ObjectId, ref: 'User'},
   }, {
     timestamps: true
   });
@@ -23,7 +23,7 @@ const recipeSchema = new Schema({
         required: true
     },
     reviews: [reviewSchema],
-    userId:{type: Schema.Types.ObjectId, ref: 'User'}
+    userId: [{type: Schema.Types.ObjectId, ref: 'User'}],
 }, {
     timestamps: true
 });

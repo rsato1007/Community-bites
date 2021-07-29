@@ -14,8 +14,8 @@ function create(req, res) {
 	// console.log("1"+req.user);
 	// console.log("2"+req.params.id);
 	const recipe = new Recipe(req.body);
+	console.log(recipe);
 	recipe.userId.push(req.user);
-	console.log("RECIPE" + recipe);
 	recipe.save(function (err) {
 		if (err) { 
 			// add alert later TBD
