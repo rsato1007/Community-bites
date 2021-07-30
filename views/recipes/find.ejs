@@ -5,43 +5,64 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/find.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
   <title>Find Recipe</title>
 </head>
 
 <body>
   <%- include('../partials/navbar') %>
+  <h2 id="Find-Header">Find Tonight's Dinner:</h2>
   <form id="new-form" action="/recipes/display" method="GET">
-    <label>Enter Recipe Name (Title):</label>
-    <input type="text" name="recipeName">
-    <input type="submit" value="Find Recipe">
+    <span id="form-text">
+      <label>Enter Recipe Name (Title):</label>
+      <input type="text" name="recipeName">
+      <input type="submit" value="Find Recipe">
+    </span>
   </form>
   <section>
     <% if (recipe.length){ %>
-      <table>
-        <thead>
-          <tr>
-            <th>Receipe Name</th>
-            <th>Ingredients</th>
-            <th>Steps</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <%= recipe[0].recipeName %>
-            </td>
-            <td>
-              <%= recipe[0].ingredients %>
-            </td>
-            <td>
-              <%= recipe[0].steps %>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <% recipe.forEach(function(m) { %>
+        <hr>
+        <div id="recipe container">
+          <h3 class="recipe-title">
+            <%= m.recipeName %>
+          </h3>
+          <div id="recipe-info-container">
+            <div class="recipe-info-box" id="recipe-info-ingred">
+              <h4>Ingredients:</h4>
+              <ul>
+                <% m.ingredients.forEach(function(ingred) { %>
+                  <li>
+                    <%= ingred %>
+                  </li>
+                  <% }); %>
+              </ul>
+              <form action="/recipes/<%= m._id %>?_method=DELETE" method="POST" class="form">
+                <button type="submit">Delete</button>
+              </form>
+            </div>
+            <div class="recipe-info-box" id="recipe-info-steps">
+              <h4>Steps:</h4>
+              <ol>
+                <% m.steps.forEach(function(step) { %>
+                  <li>
+                    <%= step %>
+                  </li>
+                  <% }); %>
+              </ol>
+              <form action="/recipes/<%= m._id %>" method="GET" class="form">
+                <button type="submit">Update</button>
+              </form>
+            </div>
+          </div>
+          <div id="buttons">
+          </div>
+        </div>
+        <% }); %>
       <br>
-      <h2>Reviews</h2>
+      <h2>Reviews for: <%= recipe[0].recipeName %></h2>
       <form id="add-review-form" method="POST" action="/recipes/display?recipeName=<%= recipe[0].recipeName %>">
         <label>Review:</label>
         <textarea name="content"></textarea>
