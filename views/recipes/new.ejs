@@ -35,7 +35,7 @@
         <section class="steps-container">
             <div class="add-form">
                 <h4>Add Steps:</h4>
-                <label>Steps</label>
+                <label id="step-num">Step 1</label>
                 <input type="text" name="stepsInput" id="stepsInput" form="new-form">
             <button onclick="addStep()" type="button">Add Step</button>
             </div>
@@ -49,6 +49,7 @@
 <script defer>
     let ingredients = [];
     let steps = [];
+    let num = 1;
     let ingredEl = document.getElementById("ingredientsInput");
     let stepsEl = document.getElementById("stepsInput");
     let formEl = document.getElementById("new-form");
@@ -64,6 +65,8 @@
         inputEl.setAttribute("value", stepsEl.value);
         formEl.append(inputEl);
         stepsEl.value = "";
+        num++;
+        document.getElementById("step-num").innerHTML = `Step ${num}`;
     };
     function addIngred() {
         console.log(ingredEl);
