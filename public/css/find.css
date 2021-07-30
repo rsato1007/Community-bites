@@ -117,5 +117,17 @@ body {
 }
 
 #add-review-form {
-    align-items: flex-end;
+    grid-area: form;
+}
+
+#review-container {
+    display: grid;
+    grid-template-areas: "reviews form";
+    grid-template-columns: 50% 50%;
+
+}
+
+#review-box {
+    grid-area: reviews;
+    text-align: center;
 }
