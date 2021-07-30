@@ -13,11 +13,16 @@ router.get("/show", isLoggedIn, recipeCtrl.showAll);
 router.post("/display", isLoggedIn, recipeCtrl.addReview);
 
 router.get('/new', isLoggedIn, function (req, res, next) {
-    res.render('recipes/new');
+    res.render('recipes/new', {
+        user: req.user,
+      });
 });
 
 router.get('/find', isLoggedIn, function (req, res, next) {
-    res.render('recipes/find', { recipe: false });
+    res.render('recipes/find', { 
+        recipe: false,
+        user: req.user,
+    });
 });
 
 router.delete('/:id', isLoggedIn, recipeCtrl.deleteRecipe);

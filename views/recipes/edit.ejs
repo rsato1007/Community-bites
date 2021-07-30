@@ -35,7 +35,7 @@
         <section id="update-container">
             <div class="cls-addsteps">
                 <form id="new-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
-                    <label>Steps:-</label>
+                    <label id="step-num">Step 1</label>
                     <input type="text" name="stepsInput" id="stepsInput">
                     <button onclick="addStep()" type="button">Add Step</button>
                 </form>
@@ -51,6 +51,7 @@
 </body>
 <script defer>
     let steps = [];
+    let num = 1;
     let stepsEl = document.getElementById("stepsInput");
     let formEl = document.getElementById("new-form");
     function addStep() {
@@ -70,6 +71,8 @@
         inputEl.setAttribute("value", stepsEl.value);
         formEl.append(inputEl);
         stepsEl.value = "";
+        num++;
+        document.getElementById("step-num").innerHTML = `Step ${num}`;
     };
 </script>
 

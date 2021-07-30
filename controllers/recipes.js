@@ -31,7 +31,9 @@ function findRecipe(req, res) {
 	//console.log("Recipe name--> "+req.query.recipeName);
 	Recipe.find({ recipeName: req.query.recipeName }, function (err, recipe) {
 		res.render("recipes/find", {
-			title: "Add Performer", recipe //**TBD find root cause
+			title: "Add Performer",
+			recipe,
+			user: req.user,
 		});
 	});
 }
@@ -40,7 +42,10 @@ function findRecipe(req, res) {
 function showAll(req, res) {
 	//console.log("Recipe name--> "+req.query.recipeName);
 	Recipe.find({}, function (err, recipe) {
-		res.render("recipes/show", { recipe, });
+		res.render("recipes/show", {
+			user: req.user,
+			recipe,
+		  });
 	});
 }
 
@@ -52,7 +57,10 @@ function addReview(req, res) {
 		recipe[0].reviews.push(req.body);
 		recipe[0].save(function (err) {
 			res.render("recipes/find", {
-				title: "Add Performer", recipe //**TBD find root cause
+				title: "Add Performer",
+				recipe,
+				user: req.user,
+			 //**TBD find root cause
 			});
 		});
 	});
@@ -68,7 +76,9 @@ function deleteRecipe(req, res) {
 // Edit Recipe
 function editRecipe(req, res) {
 	Recipe.findById(req.params.id, function(err, recipe) {
-		res.render("recipes/edit", { recipe });
+		res.render("recipes/edit",{
+			user: req.user,
+			recipe });
 	});
 };
 

@@ -7,7 +7,10 @@
         <a class="nav-links" href="/recipes/new">Create a Recipe</a>
         <a class="nav-links" href="/recipes/show">Show All Recipes</a>
         <a class="nav-links" href="/recipes/find">Search Recipes</a>
-        <!-- Do later -->
-        <a class="nav-links" href="">Log In</a>
+        <% if (user) { %>
+            <a class="nav-links" href="/logout">Log Out</a>
+            <% } else { %>
+                <a class="nav-links" href="/auth/google">Login with Google</a>
+                <% } %>
     </span>
 </Div>
