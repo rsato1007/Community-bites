@@ -1,0 +1,68 @@
+body {
+    margin: 1vw 2vw;
+    color: white;
+    background-color: rgba(88, 33, 115, 1);
+}
+
+/*  Nav bar css starts  */
+#nav-container {
+    background-color: rgba(126, 144, 206, 1);
+}
+
+#nav-bytes {
+    display: inline;
+    margin-right: 5px;
+}
+
+#slogan {
+    display: inline;
+    font-style: italic;
+    font-family: 'MonteCarlo', cursive;
+    font-size: 1.6em;
+}
+
+#nav-links-container {
+    float: right;
+    height: 44px;
+    line-height: 44px;
+}
+
+.nav-links {
+    display: inline;
+    padding-right: 30px;
+    line-height: 100%;
+}
+/*  Nav bar css ends  */
+#title-name,#title-update-name{
+    text-align: center;
+}
+
+#recipe-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "ingredients steps";
+}
+.cls-ingredients{
+    grid-area: ingredients;
+}
+.cls-steps{
+    grid-area: steps;
+}
+/********/
+#update-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "form newsteps";
+}
+.cls-addsteps{
+    grid-area: form;
+}
+.cls-liststeps{
+    grid-area: newsteps;
+}
+#submit-btn{
+    width:30%;
+    margin-left:35%;
+    margin-right:35%;
+    background-color:gold;
+}
