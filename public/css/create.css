@@ -32,57 +32,6 @@ body {
     line-height: 100%;
 }
 
-#Find-Header {
-    text-align: center;
-}
-
-#form-text {
-    display: inline-block;
-    text-align: center;
-    border-style: solid;
-    border-color: darkgray;
-    background-color: darkgray;
-    margin: 0 auto;
-}
-
-#new-form {
-    text-align: center;
-}
-
-body {
-    margin: 1vw 2vw;
-    color: white;
-    background-color: rgba(88, 33, 115, 1);
-}
-
-#nav-container {
-    background-color: rgba(126, 144, 206, 1);
-}
-
-#nav-bytes {
-    display: inline;
-    margin-right: 5px;
-}
-
-#slogan {
-    display: inline;
-    font-style: italic;
-    font-family: 'MonteCarlo', cursive;
-    font-size: 1.6em;
-}
-
-#nav-links-container {
-    float: right;
-    height: 44px;
-    line-height: 44px;
-}
-
-.nav-links {
-    display: inline;
-    padding-right: 30px;
-    line-height: 100%;
-}
-
 #recipe-container {
     border-top: 4px solid black;
     border-bottom: 4px solid black;
@@ -116,18 +65,25 @@ body {
     align-items: flex-end;
 }
 
-#add-review-form {
+#create-recipe-header {
+    text-align: center;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "form display";
+}
+
+#new-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-form {
     grid-area: form;
 }
 
-#review-container {
-    display: grid;
-    grid-template-areas: "reviews form";
-    grid-template-columns: 50% 50%;
-
-}
-
-#review-box {
-    grid-area: reviews;
-    text-align: center;
+.list-element {
+    grid-area: display;
 }
