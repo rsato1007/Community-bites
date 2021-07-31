@@ -47,6 +47,6 @@ app.use("/recipes", recipeRouter);
 
 
 //server
-app.listen(port, () => {
+app.listen(port || process.env.PORT, () => {
 	console.log(`Express is listening on port:${port}`);
 });
