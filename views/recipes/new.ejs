@@ -29,6 +29,9 @@
             </div>
             <div class="list-element">
                 <h4 id="oneIngredient">Ingredients Added: </h4>
+                <ul id="ingredient-list">
+
+                </ul>
             </div>
         </section>
         <hr>
@@ -41,6 +44,9 @@
             </div>
             <div class="list-element">
                 <h4 id="recipeStep">Recipe Steps: </h4>
+                <ul id="step-list">
+
+                </ul>
             </div>
         </section>
         <hr>
@@ -54,9 +60,11 @@
     let stepsEl = document.getElementById("stepsInput");
     let formEl = document.getElementById("new-form");
     function addStep() {
-        console.log(stepsEl);
         steps.push(stepsEl.value);
-        document.getElementById("recipeStep").append(` ${stepsEl.value}`);
+        // Appends to list of added steps
+        const ul = document.createElement('li');
+        ul.innerHTML =`${stepsEl.value}`;
+        document.getElementById("step-list").appendChild(ul);
         // return steps;
         // Add the data as hidden input fields
         let inputEl = document.createElement("input");
@@ -69,11 +77,12 @@
         document.getElementById("step-num").innerHTML = `Step ${num}`;
     };
     function addIngred() {
-        console.log(ingredEl);
         // Adds to ingredients array
         ingredients.push(ingredEl.value);
-        // Adds content below ingredients added
-        document.getElementById("oneIngredient").append(` ${ingredEl.value}`);
+        // Appends to list of added ingredients
+        const ul = document.createElement('li');
+        ul.innerHTML =`${ingredEl.value}`;
+        document.getElementById("ingredient-list").appendChild(ul);
         // return ingredients;
 
         // Add the data as hidden input fields

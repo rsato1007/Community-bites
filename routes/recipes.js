@@ -26,6 +26,7 @@ router.get('/find', isLoggedIn, function (req, res, next) {
 });
 
 router.delete('/:id', isLoggedIn, recipeCtrl.deleteRecipe);
+
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
     res.redirect("/auth/google");
