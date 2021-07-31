@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/community-bites', { 
-  useNewUrlParser: true, 
-  useCreateIndex: true, 
+mongoose.connect(process.env.MONGO_URL, { 
+  useNewUrlParser: true,
+  useCreateIndex: true,
   useUnifiedTopology: true
 });
 
