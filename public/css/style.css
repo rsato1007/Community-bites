@@ -1,18 +1,19 @@
-
-
 body {
-    margin: 1vw 2vw;
     color: white;
-    background-color: rgba(88, 33, 115, 1);
+    margin: 0;
+    background-color: rgb(169, 106, 200);
 }
 
 #nav-container {
-    background-color: rgba(126, 144, 206, 1);
+    background-color: rgb(115, 74, 136);
+    margin: 0;
+    padding: 1vw;
 }
 
 #nav-bytes {
     display: inline;
     margin-right: 5px;
+    font-family: 'Nunito', sans-serif;
 }
 
 #slogan {
@@ -32,11 +33,21 @@ body {
     display: inline;
     padding-right: 30px;
     line-height: 100%;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    text-decoration: underline;
 }
 /*  Nav bar css ends  */
+
 #header {
     text-align: center;
     font-size: 2.5em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
 }
 
 #introContainer {
@@ -44,6 +55,7 @@ body {
     grid-template-columns: 50% 50%;
     grid-template-areas: "text image";
     column-gap: 75px;
+    margin: 2em;
 }
 
 #intro-text {
@@ -52,6 +64,8 @@ body {
     font-size: 1.5em;
     line-height: 1.6em;
     font-style: italic;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 2px black;
 }
 
 #mainImg {
@@ -64,15 +78,20 @@ body {
 #get-started {
     text-decoration: none;
     color: black;
-    width: 100px;
+    width: 120px;
     height: 75px;
     border-radius: 25%;
     text-align: center;
     line-height: 75px;
-    background-color: orange;
+    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
     display: inline-block;
     font-size: 1.2em;
-    border: 1px solid black;
+    border: 1.5px solid black;
+    box-shadow: 3px 3px 5px black;
+}
+
+#get-started:hover {
+    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
 }
 
 #get-started-button {
