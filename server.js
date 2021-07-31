@@ -4,7 +4,7 @@ const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require("method-override");
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 const app = express();
 require("dotenv").config();
 require("./config/database");
@@ -47,6 +47,6 @@ app.use("/recipes", recipeRouter);
 
 
 //server
-app.listen(port || process.env.PORT, () => {
+app.listen(port, () => {
 	console.log(`Express is listening on port:${port}`);
 });
