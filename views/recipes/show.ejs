@@ -14,7 +14,7 @@
 
 <body>
   <%- include('../partials/navbar') %>
-    <h1>Show All Recipes</h1>
+    <h1 id="header">Show All Recipes</h1>
     <% recipe.forEach(function(m) { %>
       <hr>
       <div id="recipe container">
@@ -31,6 +31,8 @@
                 </li>
                 <% }); %>
             </ul>
+          </div>
+          <div class="delete-button">
             <form action="/recipes/<%= m._id %>?_method=DELETE" method="POST" class="form">
               <button type="submit">Delete</button>
             </form>
@@ -44,14 +46,12 @@
                 </li>
                 <% }); %>
             </ol>
+          </div>
+          <div class="update-button">
             <form action="/recipes/<%= m._id %>" method="GET" class="form">
               <button type="submit">Update</button>
             </form>
           </div>
-        </div>
-        <div id="buttons">
-
-
         </div>
       </div>
       <% }); %>
