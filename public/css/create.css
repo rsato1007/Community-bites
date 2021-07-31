@@ -55,6 +55,21 @@ body {
 
 }
 
+.ingredient-container {
+    margin: 1em 3em;
+}
+
+.steps-container {
+    margin: 1em 3em;
+}
+
+h4 {
+    font-size:1.5em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    justify-self: center;
+}
+
 .recipe-title {
     text-align: center;
 }
@@ -78,23 +93,92 @@ body {
 
 #create-recipe-header {
     text-align: center;
+    font-size: 2em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
+}
+
+.name-label {
+    font-size: 1.5em;
+    font-family: 'Nunito', sans-serif;
+}
+
+#name-textarea {
+    width: 250px;
+}
+
+hr {
+    border: 1.5px solid black;
+    background-color: black;
+    margin: 1em 3em;
 }
 
 section {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "form display";
+    justify-content: center;
 }
 
 #new-form {
-    display: flex;
-    justify-content: space-around;
+    /* display: flex;
+    justify-content: space-around; */
+    text-align: center;
 }
 
 .add-form {
     grid-area: form;
+    justify-self: center;
+    text-align: center;
 }
 
 .list-element {
     grid-area: display;
+    justify-self: center;
+}
+
+.list-items {
+    font-size: 1.25em;
+    font-family: 'Nunito', sans-serif;
+}
+
+#submit-changes {
+    text-decoration: none;
+    color: black;
+    height: 75px;
+    border-radius: 25%;
+    text-align: center;
+    line-height: 75px;
+    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    display: inline-block;
+    font-size: 1.2em;
+    border: 1.5px solid black;
+    box-shadow: 3px 3px 5px black;
+    width:10%;
+    margin-left:45%;
+    margin-right:45%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+#submit-changes:hover {
+    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
+}
+
+button {
+    text-decoration: none;
+    color: black;
+    border-radius: 25%;
+    text-align: center;
+    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    display: inline-block;
+    font-size: 1em;
+    border: 1.5px solid black;
+    box-shadow: 3px 3px 5px black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
 }

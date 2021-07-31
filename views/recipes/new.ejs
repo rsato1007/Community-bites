@@ -16,20 +16,20 @@
     <%- include('../partials/navbar') %>
         <h2 id="create-recipe-header">Create New Recipe</h2>
         <form id="new-form" action="/recipes" method="POST" name="form2">
-            <label>Recipe Name:</label>
-            <input type="text" name="recipeName"> 
+            <label class="name-label">Recipe Name:</label>
+            <input type="text" name="recipeName" id="name-textarea"> 
         </form>
         <hr>
         <section class="ingredient-container">
             <div class="add-form">
                 <h4>Add Ingredients:</h4>
-                <label>Ingredients</label>
+                <label class="name-label">Ingredient Name:</label>
                 <input type="text" name="ingredientsInput" id="ingredientsInput" form="new-form">
-                <button onclick="addIngred()" type="button">Add Ingredient</button>
+                <button onclick="addIngred()" type="button">Add</button>
             </div>
             <div class="list-element">
                 <h4 id="oneIngredient">Ingredients Added: </h4>
-                <ul id="ingredient-list">
+                <ul class="list-items" id="ingredient-list">
 
                 </ul>
             </div>
@@ -38,19 +38,19 @@
         <section class="steps-container">
             <div class="add-form">
                 <h4>Add Steps:</h4>
-                <label id="step-num">Step 1</label>
+                <label id="step-num" class="name-label">Step 1:</label>
                 <input type="text" name="stepsInput" id="stepsInput" form="new-form">
             <button onclick="addStep()" type="button">Add Step</button>
             </div>
             <div class="list-element">
                 <h4 id="recipeStep">Recipe Steps: </h4>
-                <ul id="step-list">
+                <ul class="list-items" id="step-list">
 
                 </ul>
             </div>
         </section>
         <hr>
-        <input type="submit" value="Add Recipe" form="new-form">
+        <input type="submit" value="Add Recipe" form="new-form" id="submit-changes">
 </body>
 <script defer>
     let ingredients = [];
