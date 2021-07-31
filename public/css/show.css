@@ -48,14 +48,16 @@ body {
     text-align: center;
 }
 
-#recipe-info-ingred {
+.recipe-info-ingred {
     margin-right: 5em;
+    flex-basis: 50%;
     /* grid-area: ingredients;
     align-content: center; */
 }
 
-#recipe-info-steps {
+.recipe-info-steps {
     margin-left: 5em;
+    flex-basis: 50%;
     /* grid-area: steps;
     align-content: center; */
 }

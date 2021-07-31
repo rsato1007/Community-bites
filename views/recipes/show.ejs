@@ -22,7 +22,7 @@
           <%= m.recipeName %>
         </h3>
         <div id="recipe-info-container">
-          <div class="recipe-info-box" id="recipe-info-ingred">
+          <div class="recipe-info-box recipe-info-ingred">
             <h4>Ingredients:</h4>
             <ul>
               <% m.ingredients.forEach(function(ingred) { %>
@@ -35,7 +35,7 @@
               <button type="submit">Delete</button>
             </form>
           </div>
-          <div class="recipe-info-box" id="recipe-info-steps">
+          <div class="recipe-info-box recipe-info-steps">
             <h4>Steps:</h4>
             <ol>
               <% m.steps.forEach(function(step) { %>
