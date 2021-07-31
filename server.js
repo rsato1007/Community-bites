@@ -31,7 +31,7 @@ app.use(methodOverride('_method'));
 //session middleware
 app.use(
     session({
-      secret: "COMMUNITY-BITES!",
+      secret: process.env.SECRET,
       resave: false,
       saveUninitialized: true,
     })
