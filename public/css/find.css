@@ -43,83 +43,38 @@ body {
 }
 /*  Nav bar css ends  */
 
-#Find-Header {
-    text-align: center;
-}
-
-#form-text {
-    display: inline-block;
-    text-align: center;
-    border-style: solid;
-    border-color: darkgray;
-    background-color: darkgray;
-    margin: 0 auto;
-}
-
-#new-form {
-    text-align: center;
-}
-
-body {
-    margin: 1vw 2vw;
-    color: white;
-    background-color: rgba(88, 33, 115, 1);
-}
-
-#nav-container {
-    background-color: rgba(126, 144, 206, 1);
-}
-
-#nav-bytes {
-    display: inline;
-    margin-right: 5px;
-}
-
-#slogan {
-    display: inline;
-    font-style: italic;
-    font-family: 'MonteCarlo', cursive;
-    font-size: 1.6em;
-}
-
-#nav-links-container {
-    float: right;
-    height: 44px;
-    line-height: 44px;
-}
-
-.nav-links {
-    display: inline;
-    padding-right: 30px;
-    line-height: 100%;
-}
-
 #recipe-container {
     border-top: 4px solid black;
     border-bottom: 4px solid black;
 }
-#recipe-info-container {
-    display: flex;
-    justify-content: center;
-    /* grid-template-columns: 50% 50%;
-    grid-template-areas: "ingredients steps"; */
 
+#recipe-info-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "ingredients steps";
+    justify-content: center;
 }
 
 .recipe-title {
     text-align: center;
+    font-size:1.5em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    justify-self: center;
 }
 
-#recipe-info-ingred {
+.recipe-info-ingred {
     margin-right: 5em;
-    /* grid-area: ingredients;
-    align-content: center; */
+    grid-area: ingredients;
+    justify-self: center;
+    text-align: center;
 }
 
-#recipe-info-steps {
+.recipe-info-steps {
     margin-left: 5em;
-    /* grid-area: steps;
-    align-content: center; */
+    grid-area: steps;
+    justify-self: center;
+    text-align: center;
 }
 
 .form {
@@ -129,6 +84,7 @@ body {
 
 #add-review-form {
     grid-area: form;
+    justify-self: center;
 }
 
 #review-container {
@@ -141,4 +97,147 @@ body {
 #review-box {
     grid-area: reviews;
     text-align: center;
+    justify-self: center;
+}
+
+#Find-Header {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
+}
+
+#name-label {
+    font-size: 1.5em;
+    font-family: 'Nunito', sans-serif;
+}
+
+#new-form {
+    text-align: center;
+}
+
+#name-textarea {
+    width: 250px;
+}
+
+#find-recipe {
+    text-decoration: none;
+    color: black;
+    border-radius: 25%;
+    text-align: center;
+    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    display: inline-block;
+    font-size: 1em;
+    border: 1.5px solid black;
+    box-shadow: 3px 3px 5px black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+#find-recipe:hover {
+    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
+}
+
+#no-recipe {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+hr {
+    border: 1.5px solid black;
+    background-color: black;
+    margin: 1em 3em; 
+}
+
+h4 {
+    text-align: center;
+    font-size:1.5em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    justify-self: center;
+}
+
+ul,
+ol {
+    font-size: 1.25em;
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+}
+
+.delete-button {
+    justify-self: center;
+    margin-bottom: 1em;
+}
+
+.update-button {
+    justify-self: center;
+    margin-bottom: 2em;
+}
+
+button {
+    text-decoration: none;
+    color: black;
+    border-radius: 25%;
+    text-align: center;
+    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    display: inline-block;
+    font-size: 1.5em;
+    border: 1.5px solid black;
+    box-shadow: 3px 3px 5px black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
+}
+
+th {
+    text-align: center;
+    font-size:1.1em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    justify-self: center;
+}
+
+td {
+    font-family: 'Nunito', sans-serif;
+}
+
+tbody {
+    line-height: 2em;
+}
+
+.review-content {
+    text-align: left;
+}
+
+.add-review-label {
+    font-size: 1.25em;
+    font-family: 'Nunito', sans-serif;
+}
+
+.rating-label {
+    font-size: 1.1em;
+    font-family: 'Nunito', sans-serif;
+}
+
+#submit-review {
+    text-decoration: none;
+    color: black;
+    border-radius: 25%;
+    text-align: center;
+    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    display: inline-block;
+    font-size: 1em;
+    border: 1.5px solid black;
+    box-shadow: 3px 3px 5px black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+#submit-review:hover {
+    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
 }
