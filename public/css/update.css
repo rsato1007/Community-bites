@@ -43,37 +43,125 @@ body {
 }
 /*  Nav bar css ends  */
 
-#title-name,#title-update-name{
+#title-name, #title-update-name{
     text-align: center;
+    font-size: 2em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
 }
 
-#recipe-container{
+#recipe-container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "ingredients steps";
+    justify-content: center;
 }
 
-.cls-ingredients{
+.recipe-info-ingred {
+    margin-right: 5em;
     grid-area: ingredients;
+    justify-self: center;
+    text-align: center;
 }
-.cls-steps{
+
+.recipe-info-steps {
+    margin-left: 5em;
     grid-area: steps;
+    justify-self: center;
+    text-align: center;
 }
-/********/
-#update-container{
+
+#update-container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "form newsteps";
+    justify-content: center;
 }
-.cls-addsteps{
+
+.cls-addsteps {
     grid-area: form;
+    justify-self: center;
+    text-align: center;
 }
-.cls-liststeps{
+
+.cls-liststeps {
     grid-area: newsteps;
+    justify-self: center;
+    text-align: center;
 }
+
 #submit-btn{
-    width:30%;
-    margin-left:35%;
-    margin-right:35%;
-    background-color:gold;
+    text-decoration: none;
+    color: black;
+    height: 75px;
+    border-radius: 25%;
+    text-align: center;
+    line-height: 75px;
+    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    display: inline-block;
+    font-size: 1.2em;
+    border: 1.5px solid black;
+    box-shadow: 3px 3px 5px black;
+    width: 10%;
+    margin-left: 45%;
+    margin-right: 45%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size:1.5em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    justify-self: center;
+}
+
+h4 {
+    font-size:1.5em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    justify-self: center;
+}
+
+ul,
+ol {
+    font-size: 1.25em;
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+}
+
+hr {
+    border: 1.5px solid black;
+    background-color: black;
+    margin: 1em 3em; 
+}
+
+.steps-title {
+    font-size:1.5em;
+    font-family: 'Nunito', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    justify-self: center;
+}
+
+#step-num {
+    font-size: 1.5em;
+    font-family: 'Nunito', sans-serif;
+}
+
+button {
+    text-decoration: none;
+    color: black;
+    border-radius: 25%;
+    text-align: center;
+    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    display: inline-block;
+    font-size: 1em;
+    border: 1.5px solid black;
+    box-shadow: 3px 3px 5px black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
 }

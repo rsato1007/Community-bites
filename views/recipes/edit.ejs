@@ -17,26 +17,37 @@
         <h1 id="title-name">Recipe Name: <%= recipe.recipeName %>
         </h1>
         <section id="recipe-container">
-            <div class="cls-ingredients">
-                <h2>List of Ingredients:</h2>
-                <p>
-                    <%= recipe.ingredients %>
-                </p>
-            </div>
-            <div class="cls-steps">
-                <h2>List of Steps:</h2>
-                <p>
-                    <%= recipe.steps %>
-                </p>
-            </div>
+            <div class="recipe-info-box recipe-info-ingred">
+                <h4>Ingredients:</h4>
+                <ul>
+                  <% recipe.ingredients.forEach(function(ingred) { %>
+                    <li>
+                      <%= ingred %>
+                    </li>
+                    <% }); %>
+                </ul>
+              </div>
+              <div class="recipe-info-box recipe-info-steps">
+                <h4>Steps:</h4>
+                <ol>
+                  <% recipe.steps.forEach(function(step) { %>
+                    <li>
+                      <%= step %>
+                    </li>
+                    <% }); %>
+                </ol>
+              </div>
         </section>
         <hr>
 
         <h2 id="title-update-name">Update Recipe Steps:</h2>
         <section id="update-container">
             <div class="cls-addsteps">
+              <h3 class="steps-title">
+                Add the Steps:
+              </h3>
                 <form id="new-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
-                    <label id="step-num">Step 1</label>
+                    <label id="step-num">Step 1:</label>
                     <input type="text" name="stepsInput" id="stepsInput">
                     <button onclick="addStep()" type="button">Add Step</button>
                 </form>
@@ -46,7 +57,8 @@
                 <ul id="lists"></ul>
             </div>
         </section>
-        <input type="submit" value="Submit Changes" form="new-form" id="submit-btn">
+        <hr>
+        <input type="submit" value="Update" form="new-form" id="submit-btn">
 
 
 </body>
@@ -73,7 +85,7 @@
         formEl.append(inputEl);
         stepsEl.value = "";
         num++;
-        document.getElementById("step-num").innerHTML = `Step ${num}`;
+        document.getElementById("step-num").innerHTML = `Step ${num}:`;
     };
 </script>
 
