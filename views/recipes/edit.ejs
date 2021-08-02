@@ -72,9 +72,10 @@
         steps.push(stepsEl.value);
         //document.getElementById("recipeStep").append(` ${stepsEl.value}`);
 
-        const ul = document.createElement('li');
-        ul.innerHTML =`${stepsEl.value}`;
-        document.getElementById("lists").appendChild(ul);
+        const liEl = document.createElement('li');
+        liEl.setAttribute("id", "add-li");
+        liEl.innerHTML =`${stepsEl.value}`;
+        document.getElementById("lists").appendChild(liEl);
 
         // return steps;
         // Add the data as hidden input fields
