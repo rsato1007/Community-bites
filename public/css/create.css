@@ -96,6 +96,9 @@ h4 {
     font-size: 2em;
     font-family: 'Nunito', sans-serif;
     text-shadow: 2px 2px 5px black;
+    animation-duration: 1.5s;
+    animation-name: fallsdown;
+    z-index: 1;
 }
 
 .name-label {
@@ -111,6 +114,9 @@ hr {
     border: 1.5px solid black;
     background-color: black;
     margin: 1em 3em;
+    animation-duration: 1.5s;
+    animation-name: fallsdown;
+    z-index: 1;
 }
 
 section {
@@ -118,12 +124,18 @@ section {
     grid-template-columns: 50% 50%;
     grid-template-areas: "form display";
     justify-content: center;
+    animation-duration: 1.5s;
+    animation-name: fallsdown;
+    z-index: 1;
 }
 
 #new-form {
     /* display: flex;
     justify-content: space-around; */
     text-align: center;
+    animation-duration: 1.5s;
+    animation-name: fallsdown;
+    z-index: 1;
 }
 
 .add-form {
@@ -159,6 +171,9 @@ section {
     margin-right:45%;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
+    animation-duration: 1.5s;
+    animation-name: fallsdown;
+    z-index: 1;
 }
 
 #submit-changes:hover {
@@ -181,4 +196,38 @@ button {
 
 button:hover {
     background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
+}
+
+li {
+    animation-duration: 0.75s;
+    animation-name: appear;
+}
+
+#com-bytes-link {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes fallsdown {
+    from {
+        opacity: 0;
+        position: relative;
+        bottom: 30px;
+    }
+
+    to {
+        opacity: 1;
+        position: relative;
+        bottom: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
