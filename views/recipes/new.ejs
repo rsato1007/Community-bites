@@ -17,14 +17,14 @@
         <h2 id="create-recipe-header">Create New Recipe</h2>
         <form id="new-form" action="/recipes" method="POST" name="form2">
             <label class="name-label">Recipe Name:</label>
-            <input type="text" name="recipeName" id="name-textarea"> 
+            <input type="text" name="recipeName" id="name-textarea" placeholder="e.g. Taco"> 
         </form>
         <hr>
         <section class="ingredient-container">
             <div class="add-form">
                 <h4>Add Ingredients:</h4>
                 <label class="name-label">Ingredient Name:</label>
-                <input type="text" name="ingredientsInput" id="ingredientsInput" form="new-form">
+                <input type="text" name="ingredientsInput" id="ingredientsInput" form="new-form" placeholder="e.g. 1 Garlic Clove">
                 <button onclick="addIngred()" type="button">Add</button>
             </div>
             <div class="list-element">
@@ -39,7 +39,7 @@
             <div class="add-form">
                 <h4>Add Steps:</h4>
                 <label id="step-num" class="name-label">Step 1:</label>
-                <input type="text" name="stepsInput" id="stepsInput" form="new-form">
+                <input type="text" name="stepsInput" id="stepsInput" form="new-form" placeholder="e.g. Preheat Oven">
             <button onclick="addStep()" type="button">Add Step</button>
             </div>
             <div class="list-element">

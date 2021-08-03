@@ -52,6 +52,7 @@ body {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "ingredients steps";
+    row-gap: 1.25em;
     justify-content: center;
 }
 
@@ -64,14 +65,15 @@ body {
 }
 
 .recipe-info-ingred {
-    margin-right: 5em;
+    margin-right: 3em;
     grid-area: ingredients;
     justify-self: center;
     text-align: center;
 }
 
 .recipe-info-steps {
-    margin-left: 5em;
+    margin-left: 3em;
+    margin-right: 2.5em;
     grid-area: steps;
     justify-self: center;
     text-align: center;
@@ -108,6 +110,8 @@ body {
     animation-duration: 1.5s;
     animation-name: fallsdown;
     z-index: 1;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
 }
 
 #name-label {
@@ -117,6 +121,7 @@ body {
 
 #new-form {
     text-align: center;
+    margin-bottom: 3em;
     animation-duration: 1.5s;
     animation-name: fallsdown;
     z-index: 1;
@@ -129,19 +134,19 @@ body {
 #find-recipe {
     text-decoration: none;
     color: black;
-    border-radius: 25%;
+    border-radius: 13%;
     text-align: center;
-    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    background: white;
     display: inline-block;
     font-size: 1em;
-    border: 1.5px solid black;
+    border: 0;
     box-shadow: 3px 3px 5px black;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
 }
 
 #find-recipe:hover {
-    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
+    background: rgb(204, 204, 204);
 }
 
 #no-recipe {
@@ -157,8 +162,8 @@ body {
 }
 
 hr {
-    border: 1.5px solid black;
-    background-color: black;
+    border: 1.5px solid rgb(115, 74, 136);
+    background-color: rgb(115, 74, 136);
     margin: 1em 3em; 
 }
 
@@ -190,9 +195,9 @@ ol {
 button {
     text-decoration: none;
     color: black;
-    border-radius: 25%;
+    border-radius: 15%;
     text-align: center;
-    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    background: white;
     display: inline-block;
     font-size: 1.5em;
     border: 1.5px solid black;
@@ -202,7 +207,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
+    background: rgb(206, 206, 206);
 }
 
 th {
@@ -238,25 +243,30 @@ tbody {
 #submit-review {
     text-decoration: none;
     color: black;
-    border-radius: 25%;
+    border-radius: 15%;
     text-align: center;
-    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    background: white;
     display: inline-block;
     font-size: 1em;
-    border: 1.5px solid black;
+    border: 0;
     box-shadow: 3px 3px 5px black;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
 }
 
 #submit-review:hover {
-    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
+    background: rgb(216, 216, 216);
 }
 
 section {
     animation-duration: 1.5s;
     animation-name: fallsdown;
     z-index: 1;
+}
+
+li {
+    margin-bottom: .85em;
+    line-height: 1.33em;
 }
 
 @keyframes fallsdown {
