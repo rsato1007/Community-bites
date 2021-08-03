@@ -48,7 +48,7 @@
               </h3>
                 <form id="new-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
                     <label id="step-num">Step 1:</label>
-                    <input type="text" name="stepsInput" id="stepsInput">
+                    <input type="text" name="stepsInput" id="stepsInput" placeholder="e.g. Preheat Oven">
                     <button onclick="addStep()" type="button">Add Step</button>
                 </form>
             </div>

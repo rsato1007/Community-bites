@@ -44,6 +44,8 @@ body {
 /*  Nav bar css ends  */
 
 #header {
+    margin-top: 1em;
+    margin-bottom: 1em;
     text-align: center;
     font-size: 2.5em;
     font-family: 'Nunito', sans-serif;
@@ -55,7 +57,7 @@ body {
 
 #introContainer {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     grid-template-areas: "text image";
     column-gap: 75px;
     margin: 2em;
@@ -64,37 +66,42 @@ body {
 #intro-text {
     display: inline;
     grid-area: text;
-    font-size: 1.5em;
+    font-size: 1.4em;
     line-height: 1.6em;
     font-style: italic;
     font-family: 'Nunito', sans-serif;
     text-shadow: 2px 2px 2px black;
+    margin: 1em;
 }
 
 #mainImg {
     height: 400px;
-    width: 400px;
+    width: 500px;
     display: inline-block;
     grid-area: image;
+    place-self: center start;
 }
 
 #get-started {
     text-decoration: none;
     color: black;
     width: 120px;
-    height: 75px;
-    border-radius: 25%;
+    height: 55px;
+    border-radius: 18%;
     text-align: center;
-    line-height: 75px;
-    background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2));
+    line-height: 55px;
+    /* background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2)); */
+    background: white;
+    font-family: 'Nunito', sans-serif;
     display: inline-block;
     font-size: 1.2em;
-    border: 1.5px solid black;
+    font-weight: bold;
+    /* border: 0.5px solid black; */
     box-shadow: 3px 3px 5px black;
 }
 
 #get-started:hover {
-    background: linear-gradient(rgb(255, 224, 50), rgb(228, 194, 0), rgb(192, 163, 0));
+    background: rgb(223, 223, 223);
 }
 
 #get-started-button {
