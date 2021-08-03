@@ -7,7 +7,7 @@ body {
 #nav-container {
     background-color: rgb(115, 74, 136);
     margin: 0;
-    padding: 1vw;
+    padding: 10px 15px 10px 15px;
 }
 
 #nav-bytes {
@@ -20,7 +20,7 @@ body {
     display: inline;
     font-style: italic;
     font-family: 'MonteCarlo', cursive;
-    font-size: 1.6em;
+    font-size: clamp(1.5em, 2vw, 1.5em);
 }
 
 #nav-links-container {
@@ -31,23 +31,30 @@ body {
 
 .nav-links {
     display: inline;
-    padding-right: 30px;
+    padding-right: 15px;
     line-height: 100%;
     color: white;
     font-family: 'Nunito', sans-serif;
     text-decoration: none;
+    font-size: clamp(13px, 1.3vw, 1em);
 }
 
 .nav-links:hover {
     text-decoration: underline;
 }
+
+#com-bytes-link {
+    text-decoration: none;
+    color: white;
+}
+
 /*  Nav bar css ends  */
 
 #header {
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
-    font-size: 2.5em;
+    font-size: clamp(30px, 4vw, 40px);
     font-family: 'Nunito', sans-serif;
     text-shadow: 2px 2px 5px black;
     animation-duration: 3s;
@@ -59,14 +66,14 @@ body {
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-areas: "text image";
-    column-gap: 75px;
+    column-gap: 45px;
     margin: 2em;
 }
 
 #intro-text {
     display: inline;
     grid-area: text;
-    font-size: 1.4em;
+    font-size: clamp(15px, 2vw, 25px);
     line-height: 1.6em;
     font-style: italic;
     font-family: 'Nunito', sans-serif;
@@ -75,11 +82,17 @@ body {
 }
 
 #mainImg {
-    height: 400px;
-    width: 500px;
+    height: clamp(10px, 90%, 520px);
+    width: clamp(10px, 88%, 495px);
     display: inline-block;
     grid-area: image;
     place-self: center start;
+}
+
+#get-started-button {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 #get-started {
@@ -90,13 +103,11 @@ body {
     border-radius: 18%;
     text-align: center;
     line-height: 55px;
-    /* background: linear-gradient(rgb(255, 229, 84), gold, rgb(218, 185, 2)); */
     background: white;
     font-family: 'Nunito', sans-serif;
     display: inline-block;
     font-size: 1.2em;
     font-weight: bold;
-    /* border: 0.5px solid black; */
     box-shadow: 3px 3px 5px black;
 }
 
@@ -104,15 +115,7 @@ body {
     background: rgb(223, 223, 223);
 }
 
-#get-started-button {
-    text-align: center;
-    margin-top: 100px;
-}
-
-#com-bytes-link {
-    text-decoration: none;
-    color: white;
-}
+/* Animations for the webpage */
 
 @keyframes fall-down {
     from {
@@ -126,4 +129,43 @@ body {
         position: relative;
         bottom: 0;
     }
+}
+
+/* End of Animations for Webpage */
+
+/* @media only screen and (min-width: 601px) {
+    
+} */
+
+@media only screen and (max-width: 1000px) {
+    #nav-container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 80px;
+    }
+
+    #nav-links-container {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #introContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px;
+        column-gap: 0px;
+        row-gap: 10px;
+        grid-template-areas: "image"
+                             "text";
+    }
+
+    #mainImg {
+        height: 100%;
+        width: 75%;
+        justify-self: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
 }
